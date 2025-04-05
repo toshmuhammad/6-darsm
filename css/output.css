@@ -8551,6 +8551,18 @@ video {
   top: 1.25rem;
 }
 
+.top-\[1100px\] {
+  top: 1100px;
+}
+
+.top-\[800px\] {
+  top: 800px;
+}
+
+.right-4 {
+  right: 1rem;
+}
+
 .isolate {
   isolation: isolate;
 }
