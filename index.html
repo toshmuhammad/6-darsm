@@ -1,66 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Don-don ziki</title>
     <link rel="stylesheet" href="./css/output.css">
 </head>
+
 <body class="bg-[#131537] text-white min-h-screen">
-    <div >
+    <div>
         <!-- Game zone -->
-    <section id="gameZone">
-        <div class="max-w-[476px] w-full mx-auto bg-triangle bg-no-repeat bg-center">
-            <ul class="grid grid-cols-2 gap-x-20 gap-y-6">
-                <li>
-                    <button class="js-hand">
-                        <img width="198" height="203" src="./images/qogoz.svg" alt="qogoz">
-                    </button>
-                </li>
-                <li>
-                    <button class="js-hand">
-                        <img width="198" height="203" src="./images/tosh.svg" alt="tosh">
-                    </button>
-                </li>
-                <li class="col-span-2 place-self-center">
-                    <button class="js-hand">
-                        <img width="198" height="203" src="./images/qaychi.svg" alt="qaychi">
-                    </button>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Second game zone -->
-    <section class="" id="secondGameZone">
-        <div class="flex items-center justify-between">
-            <img src="./images/qogoz.svg" alt="" id="user">
-            <div class="flex flex-col items-center gap-4">
-                <strong id="status"></strong>
-                <button class="btn btn-netural" id="refreshGame">Play again</button>
+        <section id="gameZone">
+            <div id="gameZoneInner" class="max-w-[476px] w-full mx-auto bg-no-repeat bg-center" data-mode="simple">
+                <!-- <button id="modeChanger" class="btn btn-primary">Mode</button> -->
+                <ul class="grid">
+                    <li>
+                        <button class="js-hand">
+                            <img src="./images/qogoz.svg" alt="qogoz">
+                        </button>
+                    </li>
+                    <li>
+                        <button class="js-hand">
+                            <img src="./images/tosh.svg" alt="tosh">
+                        </button>
+                    </li>
+                    <li class="">
+                        <button class="js-hand">
+                            <img src="./images/qaychi.svg" alt="qaychi">
+                        </button>
+                    </li>
+                    <li class="">
+                        <button class="js-hand">
+                            <img src="./images/dog.svg" alt="dog">
+                        </button>
+                    </li>
+                    <li class="">
+                        <button class="js-hand">
+                            <img src="./images/kaltakesak.svg" alt="kaltakesak">
+                        </button>
+                    </li>
+                </ul>
             </div>
-            <img src="./images/soya.svg" alt="" id="robot">
-        </div>
-    </section>
+        </section>
 
-    <!-- Open the modal using ID.showModal() method -->
-<button class="btn ml-[1400px] absolute bottom-5 bg-[#131537] text-[#fff]" onclick="my_modal_1.showModal()">RULES</button>
+        <!-- Second game zone -->
+        <section class="" id="secondGameZone">
+            <div class="flex items-center justify-between">
+                <img src="./images/qogoz.svg" alt="" id="user">
+                <div class="flex flex-col items-center gap-4">
+                    <strong id="status"></strong>
+                    <button class="btn btn-netural" id="refreshGame">Play again</button>
+                </div>
+                <img src="./images/soya.svg" alt="soya" id="robot">
+            </div>
+        </section>
+
+        <!-- Open the modal using ID.showModal() method -->
+        <!-- <button class="btn ml-[1400px] absolute bottom-5 bg-[#131537] text-[#fff]" onclick="my_modal_1.showModal()">RULES</button>
 <dialog id="my_modal_1" class="modal">
   <div class="modal-box">
     <h1 class="text-[#3B4262] text-4xl   font-bold pt-8">RULES</h1>
     <img class="mt-[48px] ml-[70px]" src="./images/qoida.svg" alt="" width="305" height="271">
-    <!-- <p class="py-4">Press ESC key or click the button below to close</p> -->
     <div class="modal-action">
       <form method="dialog">
-        <button class="btn absolute top-1 right-5">
+        <button class="btn absolute top-14 right-5">
             <img src="./images/x.svg" alt="">
         </button>
       </form>
     </div>
   </div>
-</dialog>
-
+</dialog> -->
     </div>
+    <!-- Modal -->
+    <!-- You can open the modal using ID.showModal() method -->
+
+    <div class="absolute right-5 bottom-5 flex flex-col gap-2">
+        <button class="btn btn-secondary" id="rules">Rules</button>
+        <button class="btn btn-primary" id="modeChanger">Advanced</button>
+    </div>
+
+    <dialog id="rulesModal" class="modal">
+        <div class="modal-box">
+            <form method="dialog">
+                <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-14">✕</button>
+                <h1 class="text-[#3B4262] text-4xl   font-bold pt-8">RULES</h1>
+            </form>
+            
+        </div>
+    </dialog>
+
     <script src="./js/main.js" type="module"></script>
 </body>
+
 </html>

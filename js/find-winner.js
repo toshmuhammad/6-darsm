@@ -1,11 +1,12 @@
 export function findWinner(user, robot) {
-    const userChoice = user.split("/").pop().split(".")[0]; 
-    if (userChoice === robot) {
+    if (user === robot) {
         return "tied";
     } else if (
-        (userChoice === "tosh" && robot === "qaychi") ||
-        (userChoice === "qogoz" && robot === "tosh") ||
-        (userChoice === "qaychi" && robot === "qogoz")
+        (user === "tosh" && (robot === "qaychi" || robot === "kaltakesak")) ||
+        (user === "qogoz" && (robot === "tosh" || robot === "dog")) ||
+        (user === "qaychi" && (robot === "qogoz" || robot === "kaltakesak")) ||
+        (user === "kaltakesak" && (robot === "qogoz" || robot === "dog")) ||
+        (user === "dog" && (robot === "qaychi" || robot === "tosh"))
     ) {
         return "user";
     } else {

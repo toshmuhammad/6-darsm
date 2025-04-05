@@ -4,7 +4,13 @@ const elGameZone = document.getElementById("gameZone"),
     elHands = document.querySelectorAll(".js-hand"),
     elRefreshGameButton = document.getElementById("refreshGame"),
     elStatus = document.getElementById("status"),
+    elGameZoneInner = document.getElementById("gameZoneInner"),
+    elModeChanger= document.getElementById("modeChanger"),
+    elRules = document.getElementById("rules"),
+    elRulesModal = document.getElementById("rulesModal"),
+    elRuleImag = document.getElementById("ruleImage"),
     elRobot = document.getElementById("robot");
+
     export {
     elGameZone,
     elSecondGameZone,
@@ -13,4 +19,9 @@ const elGameZone = document.getElementById("gameZone"),
     elHands,
     elRefreshGameButton,
     elStatus,
+    elGameZoneInner,
+    elModeChanger,
+    elRules,
+    elRulesModal,
+    elRuleImag,
 };

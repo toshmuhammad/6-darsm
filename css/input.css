@@ -1,3 +1,69 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    div[data-mode="simple"] {
+        background-image: url(../images/uchburchak.svg);
+    }
+
+    div[data-mode="advanced"] {
+        background-image: url(../images/5burchak.svg);
+    }
+
+    div[data-mode="simple"] img {
+        @apply w-[198px] h-[203px];
+    }
+
+    div[data-mode="advanced"] img {
+        @apply w-[145px] h-[148px];
+    }
+
+    div[data-mode] > ul {
+        @apply grid-cols-2;
+    }
+
+    div[data-mode="simple"] > ul {
+        @apply gap-y-6 gap-x-20;
+    }
+
+    div[data-mode="advanced"] > ul {
+        row-gap: 38px;
+        column-gap: 52px;
+    }
+
+    div[data-mode="advanced"] > ul > li:nth-child(1) {
+        grid-column: 1 / 3;
+        place-self: center;
+        margin-bottom: -55;
+    }
+
+    div[data-mode="advanced"] > ul > li:nth-child(2) {
+        place-self: start;
+    }
+
+    div[data-mode="advanced"] > ul > li:nth-child(3) {
+        place-self: end;
+    }
+
+    div[data-mode="advanced"] > ul > li:nth-child(4) {
+        place-self: end;
+    }
+
+    div[data-mode="advanced"] > ul > li:nth-child(5) {
+        place-self: start;
+    }
+
+    div[data-mode="simple"] > ul > li:nth-child(3) {
+        grid-column: 1 / 3;
+        place-self: center;
+    }
+
+    div[data-mode="simple"] > ul > li:nth-child(4) {
+        display: none;
+    }
+
+    div[data-mode="simple"] > ul > li:nth-child(5) {
+        display: none;
+    }
+}  
